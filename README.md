@@ -1,6 +1,6 @@
 # COMP-6651-Project
 
-https://github.com/jimimehta/COMP-6651-Project/blob/main/
+https://github.com/jimimehta/COMP-6651-Project/
 
 you can run the functions defined in graph.py python file in Jupyter notebook cells and run the ui.py file through the command line.
 
