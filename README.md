@@ -18,10 +18,12 @@ run "graph.py"
 #Change parameters as per your desire
 #default is 100 Graphs of 15 vertices
 #Create FirstFitStats.xlsx with column names as Graph Id, vertex_count, color_count or use the empty file given with code
-run "run_experiment()"
+#n=number of vertices
+run "run_experiment(n)"
 
-#Use this to plot Single Graph images and a single pickle for Step by Step graph coloring    
-run "run_experiment_v2()"
+#Use this to plot Single Graph images and a single pickle for Step by Step graph coloring
+#n=number of vertices
+run "run_experiment_v2(n)"
 
 #Use this Function to Duplicated experiment from the pickle files that are genrated using function run_experiment() or run_experiment_v2()
 #pickle are already generated graphs
