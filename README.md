@@ -4,7 +4,7 @@ https://github.com/jimimehta/COMP-6651-Project/blob/main/
 
 you can run the functions defined in graph.py python file in Jupyter notebook cells and run the ui.py file through the command line.
 
-For running the UI - input the number of nodes in the graph in the first input box and in the second input box, input probability of an edge between two vertices. THis value needs to be between 0 to 1 ( preferable 0.3 to 0.4 ). Click Generate button to generate the graph.
+For running the UI - input the number of nodes in the graph in the first input box and in the second input box, input probability of an edge between two vertices. THis value needs to be between 0 to 1 ( preferable 0.3 to 0.4 ). Click Generate button to generate the graph. Please note that the graph generated has nodes of different colors but that is not the actual coloring and these are randomly assigned colors by the python module generating the graph.
 
 For seeing the coloring of graph vertex by vertex in an online fashion, click on Add Next Node button - the graph will be generated and colored by adding one vertex at a time in the lower frame of the screen below 'Add Next Node' button.
 
@@ -12,10 +12,15 @@ For seeing the coloring of graph vertex by vertex in an online fashion, click on
 
 Dependencies - Install following modules using pip command -
 pip install networkx
+
 pip install matplotlib
+
 pip install tqdm
+
 pip install os
+
 pip install pandas
+
 pip install bokeh
 
 FirstFitStats.xlxs saves stats data to the excel
