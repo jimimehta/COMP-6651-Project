@@ -6,7 +6,6 @@ pip install jupyter notebook
 pip install networkx
 pip install matplotlib
 pip install tqdm
-pip install os
 pip install pandas
 pip install bokeh
 
