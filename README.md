@@ -8,7 +8,9 @@ For running the UI - input the number of nodes in the graph in the first input b
 
 For seeing the coloring of graph vertex by vertex in an online fashion, click on Add Next Node button - the graph will be generated and colored by adding one vertex at a time in the lower frame of the screen below 'Add Next Node' button.
 
-(Please note, while generation of graph node by node, the position of vertices change in each step ( due to change in layout done by underlying python graphing tool) but the actual subgraph is the same i.e nodes and the edges between the nodes in the current subgraph remain same as in the original graph. When all vertices are added to the graph, the result graph will match the generated graph in layout. )
+(Please note, while generation of graph node by node, the position of vertices change in each step ( due to change in layout done by underlying python graphing tool) but the actual subgraph is the same i.e nodes and the edges between the nodes in the current subgraph remain same as in the original graph. When all vertices are added to the graph, the result graph will match the generated graph in layout. 
+Also, the color of nodes in the UI changes when first edge is added, but that is also an issue of the python plotting tool. THe color value assigned to each node is still the same. You can check the same in the command line output trace. THe color of each node is printed under the line 'color map is:' for each iteration where integer value at each index i is the color value of vertex i.
+)
 
 Dependencies - Install following modules using pip command -
 pip install networkx
