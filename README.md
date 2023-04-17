@@ -41,7 +41,7 @@ run "run_experiment(n)"
 
 #Use this to generate and then plot Single Graph images and a single pickle and then generate colored graphs for each step of the FirstFit algorithm.
     
-run "run_experiment_v2()"
+run "run_experiment_v2(n)"
 
 #Use this Function to load all the graph objects generated in the original experiment, stored in their pickle files and then again run the First Fit algorithm to regenerate the data in an excel file which is generate in the current folder of the code file
 
