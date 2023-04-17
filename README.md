@@ -1,8 +1,16 @@
 # COMP-6651-Project
 
-pip install python
-pip install anaconda
-pip install jupyter notebook
+https://github.com/jimimehta/COMP-6651-Project/blob/main/
+
+you can run the functions defined in graph.py python file in Jupyter notebook cells and run the ui.py file through the command line.
+
+For running the UI - input the number of nodes in the graph in the first input box and in the second input box, input probability of an edge between two vertices. THis value needs to be between 0 to 1 ( preferable 0.3 to 0.4 ). Click Generate button to generate the graph.
+
+For seeing the coloring of graph vertex by vertex in an online fashion, click on Add Next Node button - the graph will be generated and colored by adding one vertex at a time in the lower frame of the screen below 'Add Next Node' button.
+
+(Please note, while generation of graph node by node, the position of vertices change in each step ( due to change in layout done by underlying python graphing tool) but the actual subgraph is the same i.e nodes and the edges between the nodes in the current subgraph remain same as in the original graph. When all vertices are added to the graph, the result graph will match the generated graph in layout. )
+
+Dependencies - Install following modules using pip command -
 pip install networkx
 pip install matplotlib
 pip install tqdm
