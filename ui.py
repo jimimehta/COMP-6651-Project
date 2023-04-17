@@ -83,6 +83,13 @@ app.layout = html.Div([
 )
 def update_graph(n_clicks, input_nodes, input_edges):
     if n_clicks > 0:
+        global oG
+        global pos 
+        global iG
+        global nnodes
+        global gc_map
+        global added_nodes
+        global all_colors
         # Convert the user input into lists of nodes and edges
         
         n = int(input_nodes)
@@ -130,10 +137,16 @@ def update_graph(n_clicks, input_nodes, input_edges):
         pos = nx.spring_layout(oG)
         
         
+        gc_map = [-1 for i in range(0,len(nnodes))]
+        print('global var not updated')
+        iG = nx.Graph()
+        added_nodes = []
+        
+        
         edge_trace = go.Scatter(
             x=[],
             y=[],
-            line=dict(width=0.5,color='#888'),
+#             line=dict(width=0.5,color='#888'),
             hoverinfo='none',
             mode='lines')
         node_trace = go.Scatter(
@@ -235,7 +248,7 @@ def update_graph_2(n_clicks, input_nodes, input_edges):
             edge_trace = go.Scatter(
                 x=[],
                 y=[],
-                line=dict(width=0.5,color='#888'),
+#                 line=dict(width=0.5,color='#888'),
                 hoverinfo='none',
                 mode='lines')
             node_trace = go.Scatter(
