@@ -49,6 +49,10 @@ def firstFit(graph, colormap):
     node_color = {vert: colormap[1]}  # Node 3 will be red
     nx.set_node_attributes(nG, node_color, 'color')
     gc_map[vert]= 1
+<<<<<<< HEAD
+=======
+    ggid=10
+>>>>>>> 2d4a972aba475850ca3e02b8a7f6a4b9daff3448
     while(len(nodes)>0):
         vert = nodes.pop(0)
         edgeso = nG.edges()
@@ -75,6 +79,8 @@ def firstFit(graph, colormap):
             start, end = edge
             nG.add_edge(start, end)
         added_nodes.append(vert)
+        plot_colored_v2(nG, ggid,gc_map)
+        ggid+=1
         #print nG graph here - to show the progress vertex by vertex
 #         print("----------------------------")
     return nG, gc_map 
@@ -208,12 +214,21 @@ def plot_colored(G, gid):
 #Change parameters as per your desire
 #default is 100 Graphs of 15 vertices
 #Create FirstFitStats.xlsx with column names as Graph Id, vertex_count, color_count or use the empty file given with code
+<<<<<<< HEAD
 def run_experiment(n):
     df = pd.read_excel('FirstFitStats.xlsx')
     #gid is id number of generated graph
     gid = 1000
     #range(n,n+1), n=number of vertices 
     for i in range(n,n+1):
+=======
+def run_experiment():
+    df = pd.read_excel('FirstFitStats.xlsx')
+    #gid is id number of generated graph
+    gid = 2200
+    #range(n,n+1), n=number of vertices 
+    for i in range(15,16):
+>>>>>>> 2d4a972aba475850ca3e02b8a7f6a4b9daff3448
         #Do not make changes to p if you want to generate 100 graphs of n vertices
         p=0.25
         n = i
@@ -237,7 +252,11 @@ def run_experiment(n):
 #Stat file of First-Fit is generated and written in FirstFitStats.xlsx    
 
 
+<<<<<<< HEAD
 #Plot Colored Graph using First-Fit Step by Step Coloring Algorithm
+=======
+
+>>>>>>> 2d4a972aba475850ca3e02b8a7f6a4b9daff3448
 def plot_colored_v2(nG, ggid, gc_map):
     
     pos = nx.circular_layout(nG)
@@ -249,6 +268,7 @@ def plot_colored_v2(nG, ggid, gc_map):
     plt.savefig('StepByStep_'+str(ggid)+'.png', dpi=300, bbox_inches='tight')
     plt.clf()
     
+<<<<<<< HEAD
 #Plot Colored Graph using First-Fit Step by Step Coloring Algorithm
 def plot_colored_v3(G, gid):
     
@@ -274,6 +294,16 @@ def run_experiment_v2(n):
     gid = 100
     p=0.35
     #n = Number of Vertices
+=======
+
+
+#To plot Single Graph images and pickle Step by Step    
+def run_experiment_v2():
+    gid = 100
+    p=0.35
+    #n = Number of Vertices
+    n = 10
+>>>>>>> 2d4a972aba475850ca3e02b8a7f6a4b9daff3448
     G = generate_map(n,p)
     gid = int(gid)
     gid+=1
@@ -281,7 +311,11 @@ def run_experiment_v2(n):
     time.sleep(1)
     G, gid = load_graph(filepath)
     plot_normal(G, gid)
+<<<<<<< HEAD
     nG, gc_map = plot_colored_v3(G, gid) 
+=======
+    nG, gc_map = plot_colored(G, gid) 
+>>>>>>> 2d4a972aba475850ca3e02b8a7f6a4b9daff3448
     
     
 #Use this Function to Duplicated experiment from the pickle files that are genrated using function run_experiment() or run_experiment_v2()
@@ -304,4 +338,8 @@ def duplicate_experiment(folder_name):
         new_row = { 'Graph Id':f, 'vertex_count':n, 'color_count':colorCount }
         df.loc[len(df)] = new_row
     df.to_excel(folder_name+'-FirstFitStats.xlsx', index=False)   
+<<<<<<< HEAD
     
+=======
+    
+>>>>>>> 2d4a972aba475850ca3e02b8a7f6a4b9daff3448
